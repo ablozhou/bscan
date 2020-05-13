@@ -8,25 +8,22 @@ Copyright (c) 2020—2025 zhouhh <ablozhou # gmail.com> All rights reserved.
 '''
 
 import grequests
-import threading
-import time
 import os
-from getopt import gnu_getopt;
+from getopt import gnu_getopt
 import sys
 import logging
 
-config={
-    'conf_path' : './conf/',
-    'out_path' : './out/',
-    'out_file' : 'out.txt',
+config = {
+    'conf_path': './conf/',
+    'out_path': './out/',
+    'out_file': 'out.txt',
     'headers': {
-                'Accept': '*/*',
-                'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
-                'Cache-Control': 'no-cache',
-                'Content-Type': 'application/x-www-form-urlencoded',
-                'Referer': 'https://baidu.com'
-            }
-}
+        'Accept': '*/*',
+        'User-Agent': 'Mozilla/5.0 Chrome/71.0.3578.98 Safari/537.36',
+        'Cache-Control': 'no-cache',
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'Referer': 'https://baidu.com'}}
+
 
 class FileHandler(logging.Handler):
     def __init__(self, file_path):
@@ -37,17 +34,19 @@ class FileHandler(logging.Handler):
         msg = "{}\n".format(self.format(record))
         os.write(self._fd, msg.encode('utf-8'))
 
+
 class bscan:
     def __init__(self):
-        self.lang=[]  # languages
-        self.confs=[] # configure files
-        self.threads=[]
-        self.output=config['out_path']+config['out_file'] # output file name
-        self.timeout_seconds=3 
-        self.threads_count=20
-        self.host=None
-        self.fh = None # file handler for output
-        sh = logging.StreamHandler() # stream handler like stdout
+        self.lang = []  # languages
+        self.confs = []  # configure files
+        self.threads = []
+        self.output = config['out_path'] + \
+            config['out_file']  # output file name
+        self.timeout_seconds = 3
+        self.threads_count = 20
+        self.host = None
+        self.fh = None  # file handler for output
+        sh = logging.StreamHandler()  # stream handler like stdout
         self.logger = logging.getLogger('bscan')
         self.logger.addHandler(sh)
         self.logger.setLevel(logging.DEBUG)
@@ -55,7 +54,8 @@ class bscan:
             os.mkdir(config['out_path'])
 
     def getopts(self):
-        opts, args = gnu_getopt(sys.argv[1:], "s:t:o:l:h:", ["help", "output="])#"ho:"=='-h-o:'
+        opts, args = gnu_getopt(sys.argv[1:], "s:t:o:l:h:", [
+                                "help", "output="])  # "ho:"=='-h-o:'
         print('options:{0}'.format(opts))
         print('args:{0}'.format(args))
         for o, a in opts:
@@ -64,45 +64,44 @@ class bscan:
                 self.usage()
                 sys.exit()
             if o in ("-o", "--output"):
-                self.output = config['out_path']+a
-                if self.fh != None:
+                self.output = config['out_path'] + a
+                if self.fh is not None:
                     self.logger.removeHandler(self.fh)
                 self.fh = FileHandler(self.output)
                 self.fh.setLevel(logging.INFO)
                 self.logger.addHandler(self.fh)
-            if o =="-s":
-                self.timeout_seconds=a
-            if o =="-t":
-                self.threads_count=a
-            if o =="-l":
+            if o == "-s":
+                self.timeout_seconds = a
+            if o == "-t":
+                self.threads_count = a
+            if o == "-l":
                 self.lang.append(a)
-            if o =="-h":
+            if o == "-h":
                 if not a.startswith("http://") or not a.startswith("https://"):
-                    self.host="http://"+a
-                if a[-1:]!='/':
-                    self.host+='/'
+                    self.host = "http://" + a
+                if a[-1:] != '/':
+                    self.host += '/'
 
-        if self.fh == None:
+        if self.fh is None:
             self.fh = FileHandler(self.output)
             self.fh.setLevel(logging.INFO)
             self.logger.addHandler(self.fh)
 
-        if self.host == None or len(opts)<1:
+        if self.host is None or len(opts) < 1:
             print('host:{0}'.format(self.host))
 
             self.usage()
             sys.exit()
 
-
     def usage(self):
-        u='''   python bscan.py [options] -h host[:port]
+        u = '''   python bscan.py [options] -h host[:port]
         host: the target host to scan, default schema is http.
         port: the port of the web. default is 80.
         options:
             -s seconds: timeout seconds. default is 3 sec.
             -t threads count: threads count. default is 20.
             -o ofile, --output=ofile: output log file
-            -l lang: program language of the web server. default is all. 
+            -l lang: program language of the web server. default is all.
                 new language must set in the conf directory.
             --help: print this message.
         example:
@@ -110,64 +109,63 @@ class bscan:
 
         '''
         print(u)
-         
-    def read_conf(self,confpath):
-        # pwd = os.getcwd()
-        confs=[]
 
-        confs =  os.listdir(confpath)
-        
+    def read_conf(self, confpath):
+        # pwd = os.getcwd()
+        confs = []
+
+        confs = os.listdir(confpath)
+
         for c in confs:
-            
-            fname,ext = os.path.splitext(os.path.basename(c))
+
+            fname, ext = os.path.splitext(os.path.basename(c))
             if len(self.lang) > 0 and fname not in self.lang:
                 continue
 
             self.confs.append(os.path.join('%s%s' % (confpath, c)))
-    
+
     def resp(self, r, *args, **kwargs):
         # print(r.url)
         if r.status_code == 200:
-            self.logger.info(r.url)
+            self.logger.info('{}:{}'.format(r.request.method, r.url))
 
     def run(self):
         self.getopts()
         self.read_conf(config['conf_path'])
         print('======  beginning scan ... =======')
-        paths=""
-        
+        paths = ""
+
         for f in self.confs:
-            print("config:"+f)
-            with open(f,'r',encoding='utf8') as fin:
-                tasks=[]
+            print("config:" + f)
+            with open(f, 'r', encoding='utf8') as fin:
+                tasks = []
                 for line in fin.readlines():
                     try:
                         paths = line.strip("\r").strip("\n").replace(' ', '')
                     except Exception as e:
                         print(e)
-        
+
                     if paths == "":
-                        #print("paths is empty")
+                        # print("paths is empty")
                         continue
-        
-                    url=self.host+paths
-                    #print("url:{}".format(url))
+
+                    url = self.host + paths
+                    print("url:{}".format(url))
 
                     req = grequests.get(url, callback=self.resp)
-                    req = grequests.post(url, callback=self.resp)
                     tasks.append(req)
-                res = grequests.map(tasks, size=self.threads_count,gtimeout=self.timeout_seconds)
+                    req1 = grequests.post(url+'?id=1', callback=self.resp)
+                    tasks.append(req1)
+                
+                grequests.map(
+                    tasks,
+                    size=self.threads_count,
+                    gtimeout=self.timeout_seconds)
 
-
-            
-        
+                # print(res)
         print("====== finished! =======")
- 
+
+
 if __name__ == '__main__':
     s = bscan()
     s.run()
- 
-    
- 
- 
- 
