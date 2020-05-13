@@ -166,7 +166,7 @@ yes.asp
 z.asp
 zz.asp
 zzz.asp
-ĞÂ½¨ ÎÄ±¾ÎÄµµ.txt
+æ–°å»º æ–‡æœ¬æ–‡æ¡£.txt
 21ex/jihe.asp
 25175guestbook.mdb
 access/sf2.mdb
@@ -852,7 +852,7 @@ xml
 yinyue
 youxi
 z
-ĞÂ½¨ÎÄ¼ş¼Ğ
+æ–°å»ºæ–‡ä»¶å¤¹
 admin.asp
 admin/default.asp
 admin/index.asp
@@ -1212,7 +1212,7 @@ xbyadmin
 xgjy_admin/admin_login.aspx
 xtadmin
 xuegongjin.asp
-ËµÃ÷.txt
+è¯´æ˜.txt
 11111/index.aspx
 88888/index.aspx
 a_main.aspx
@@ -1500,17 +1500,17 @@ ver.aspx
 vote.aspx
 webshell.aspx
 weihu/login.aspx
-°²È«ÊÖ²á.txt
-°²×°ÊÖ²á.txt
-°²×°ËµÃ÷.txt
-¸üĞÂÀúÊ·.txt
-ÉÌÒµ×¢²á.txt
-Éı¼¶ËµÃ÷.txt
-Ê¹ÓÃÊÖ²á.txt
-Ê¹ÓÃËµÃ÷.txt
-ÌØ±ğ¸ĞĞ».txt
-ÓÃ»§ÊÖ²á.txt
-ÓÃ»§ËµÃ÷.txt
+å®‰å…¨æ‰‹å†Œ.txt
+å®‰è£…æ‰‹å†Œ.txt
+å®‰è£…è¯´æ˜.txt
+æ›´æ–°å†å².txt
+å•†ä¸šæ³¨å†Œ.txt
+å‡çº§è¯´æ˜.txt
+ä½¿ç”¨æ‰‹å†Œ.txt
+ä½¿ç”¨è¯´æ˜.txt
+ç‰¹åˆ«æ„Ÿè°¢.txt
+ç”¨æˆ·æ‰‹å†Œ.txt
+ç”¨æˆ·è¯´æ˜.txt
 admin/ewebeditor/admin
 admin/ewebeditor
 datas/web300.mdb
@@ -1860,7 +1860,7 @@ global.asa
 global.mdb
 DataBase/%23GBooK.ASP
 include/%23%21news.aea
-ËµÃ÷ÎÄµµ.txt
+è¯´æ˜æ–‡æ¡£.txt
 webadmin.asp
 master/login.asp
 admin_login_lg.asp
@@ -1869,7 +1869,7 @@ admin_backupdata.asp
 admin_Restoredata.asp
 admin_EditPass.asp
 admin_server.asp
-°²×°.txt
+å®‰è£….txt
 help.txt
 default_right.asp
 Gas_login.asp
@@ -1900,7 +1900,7 @@ links/links.asp
 Sys_admin.asp
 texteditor
 guan%5Fli
-ËµÃ÷.htm
+è¯´æ˜.htm
 admin/adminconn.inc
 adminconn.inc
 mystat
@@ -2554,7 +2554,7 @@ xm.asa
 y
 zip
 zips
-ÕfÃ÷.txt
+èªªæ˜.txt
 newsupfile.asp
 uploadPic.asp
 hege.asp
@@ -3930,9 +3930,9 @@ savelogin
 loginerror
 pwd.txt
 alert.txt
-ÃÜÂë.txt
-ÕÊºÅ.txt
-ÖØÒª.txt
+å¯†ç .txt
+å¸å·.txt
+é‡è¦.txt
 mp3/lrc.asp
 favicon.gif
 mp3/song.asp
@@ -5064,11 +5064,11 @@ upme5.htm
 upme6.htm
 alluser
 crack8
-Crack8±à³ÌĞ¡×é
+Crack8ç¼–ç¨‹å°ç»„
 Crack8Team
 K8team
 Crack8_Team
-K8À­µÇ¸ç¸ç
+K8æ‹‰ç™»å“¥å“¥
 Scan
 2006x
 hrlp.php
@@ -5808,7 +5808,7 @@ Databases/wygkcn.mdb
 data_admin/%2388852com.mdb
 admin888/121.mdb
 data/web.mdb
-Database/%23%23!%23Êı¾İ¿â@!@.mdb
+Database/%23%23!%23æ•°æ®åº“@!@.mdb
 database/WoDig%232008.asa
 Database/Database2006.mdb
 yijuhua.asp
@@ -7260,13 +7260,13 @@ xm.php
 yingyue
 zhang
 zl
-±¸·İ
-µÇÂ½
-¹ÜÀí
-¹ÜÀíÔ±
-ºóÌ¨
-¾¯¸æ.txt
-ÃÜÂë
+å¤‡ä»½
+ç™»é™†
+ç®¡ç†
+ç®¡ç†å‘˜
+åå°
+è­¦å‘Š.txt
+å¯†ç 
 admin/ad_login.asp
 mdb/cm.mdb
 SqlIn/sqlIn_admin.asp
@@ -7275,7 +7275,7 @@ login.asa
 admin/login.asa
 adminer
 xtwh
-³ÌĞòËµÃ÷.txt
+ç¨‹åºè¯´æ˜.txt
 ***
 adminhh/Login.asp
 news/newadmin
@@ -7336,7 +7336,7 @@ User/User_Space.asp
 af../winnt/system32/cmd.exe?/c+dir
 _vti_pvt/z9v8authors.pwd
 wwroot.zip
-z9v8ĞÂ½¨%20ÎÄ±¾ÎÄµµ.txt
+z9v8æ–°å»º%20æ–‡æœ¬æ–‡æ¡£.txt
 joke/login.asp
 manage/eweb
 data_shop363/date_shop363_shop.mdb
@@ -7539,7 +7539,7 @@ data/hjkxjoekoe_cms_4.0.mdb
 data/amtwmeskydms_data.mdb
 database/rnrysiteweaver.mdb
 database/ireguseryyewuhjdjhgutwehdskjwewyt.mdb
-dnfÒ»ÊÖÏä×Ó.mdb
+dnfä¸€æ‰‹ç®±å­.mdb
 database/hwvdsiteweaver.mdb
 data/jjif%23data%23.mdb
 database/gsicsiteweaver.mdb
@@ -7722,7 +7722,7 @@ data/t1.mdb
 data/tmp.mdb
 data/tt.mdb
 data/wrzcnetshophtml.mdb
-data/¸´¼ş%20%23db.mdb
+data/å¤ä»¶%20%23db.mdb
 data_backup/data_backup.mdb
 data_data/%23clkj_cms%23.mdb
 data_lt/datareach.mdb
@@ -7752,7 +7752,7 @@ database/jycms.mdb
 database/news.mdb
 database/powereasy4.mdb/database/%23newasp.mdb
 database/shopdata.mdb
-database/¸´¼ş%20%23db.mdb
+database/å¤ä»¶%20%23db.mdb
 databasebackup/backup.mdb
 databasebackup/data.mdb
 databasebackup/databasebackup.mdb
@@ -7777,7 +7777,7 @@ db/shopdata.mdb
 db/shopwind.mdb
 db/tmp.mdb
 db/xybook.mdb
-db/¸´¼ş%20%23db.mdb
+db/å¤ä»¶%20%23db.mdb
 db2.mdb
 domaininfo.mdb
 ebossi_data_backup.mdb
@@ -7846,7 +7846,7 @@ website.mdb
 zgong/zongg1.1.0.0.mdb
 zgongg/zongg1.1.0.0.mdb
 zygl/zygl.mdb
-±¸·İ/shopbackup.mdb
+å¤‡ä»½/shopbackup.mdb
 dydata/jhw.mdb
 db/webdb.mdb
 db/webdb-old.mdb
@@ -7922,7 +7922,7 @@ databack.mdb
 databackup/%23backup.mdb
 databackup/%23data.mdb
 databackup/%23database.mdb
-database/%23%23%21%23Êı¾İ¿â%40%21%40.mdb
+database/%23%23%21%23æ•°æ®åº“%40%21%40.mdb
 database/%23%24%%5enwebcn_site.mdb
 database/)%&%21%%5e%21%23%21(%40&.mdb
 database/23%newasp.mdb
@@ -8227,7 +8227,7 @@ config/db.mdb
 /databackup/dvbbs7_backup.mdb
 /databackup/shopxp.mdb
 /database/%23$%^nwebcn_site.mdb
-/database/%23%23!%23Êı¾İ¿â@!@.mdb
+/database/%23%23!%23æ•°æ®åº“@!@.mdb
 /database/%23tzims_ver6.1.mdb
 /database/ameav_site.mdb
 /database/bak_site.mdb
@@ -8762,7 +8762,7 @@ config/db.mdb
 /ztqdata%23.mdb
 /zygl/zygl.mdb
 /zzajt/db2.mdb
-/±¸·İ/shopbackup.mdb
+/å¤‡ä»½/shopbackup.mdb
 /%23@data.mdb
 /%23123zh.mdb
 /%23886n.mdb
@@ -8805,7 +8805,7 @@ config/db.mdb
 /data/%23myaccess.mdb
 /data/%23tianyuan.mdb
 /data/%23timesshop.mdb
-/data/¸´¼ş%20%23db.mdb
+/data/å¤ä»¶%20%23db.mdb
 /data_data/%23clkj_cms%23.mdb
 /databackup/%23timesshop_backup.mdb
 /database%21/escms.mdb
@@ -8815,9 +8815,9 @@ config/db.mdb
 /database/enterprises%20.mdb
 /database/powereasy4.mdb/database/%23newasp.mdb
 /database/venus%23.mdb
-/database/¸´¼ş%20%23db.mdb
+/database/å¤ä»¶%20%23db.mdb
 /db/%23ewebeditor.mdb
-/db/¸´¼ş%20%23db.mdb
+/db/å¤ä»¶%20%23db.mdb
 /eweb/db/%23ewebeditor.mdb
 /inc/%23tao.mdb
 /new/data/%23db.mdb
