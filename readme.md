@@ -1,5 +1,10 @@
 # BScan
-a python3 tool which scan files and paths for a web backend.
+a python3 security tool which scan files and paths for a web backend.
+
+类御剑扫描服务器网站url暴露文件的开源工具
+可以用于发现某些网站是否存在admin.php, admin/, login.php, login/, admin_login, login.php.bak等 url，
+
+扫描结果可以用于发现网站漏洞。
 
 # install
 ```
